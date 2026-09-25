@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aqlli qo'ng'iroq — maktab jadvali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1><span class="bell-mark">🔔</span>Aqlli qo'ng'iroq</h1>
+    <button class="theme-btn" id="themeBtn" title="Mavzuni almashtirish">◐</button>
+  </header>
+
+  <div class="hero">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 240 240">
+        <circle class="ring-track" cx="120" cy="120" r="105"></circle>
+        <circle class="ring-progress" id="ringProgress" cx="120" cy="120" r="105"
+                stroke-dasharray="659.7" stroke-dashoffset="659.7"></circle>
+      </svg>
+      <div class="ring-center">
+        <div class="ring-status" id="statusLabel">Kutilmoqda</div>
+        <div class="ring-time" id="timeLabel">--:--</div>
+        <div class="ring-sub" id="subLabel">jadval kutilmoqda</div>
+      </div>
+    </div>
+    <div class="next-up" id="nextUp">&nbsp;</div>
+  </div>
+
+  <div class="controls">
+    <div class="field">
+      <label for="startTime">Boshlanish vaqti</label>
+      <input type="time" id="startTime" value="08:30">
+    </div>
+    <button class="action" id="applyBtn">Jadvalni tuzish</button>
+    <div class="toggle-row">
+      <span>Ovoz</span>
+      <div class="switch on" id="soundSwitch"><div class="knob"></div></div>
+    </div>
+    <button class="action ghost" id="testBellBtn">Sinov qo'ng'irog'i</button>
+  </div>
+  <div id="audioStatus" style="text-align:center; font-size:12px; color:var(--alert); margin:-14px 0 20px; min-height:16px;"></div>
+
+  <h2 class="timeline-heading">Kunlik jadval</h2>
+  <div class="timeline" id="timeline"></div>
+
+  <h2 class="timeline-heading">Tanaffus musiqasi</h2>
+  <div class="controls" style="justify-content: space-between;">
+    <div class="field" style="font-size:14px; color:var(--ink);">
+      <span>🎵</span>
+      <span>Tanaffusda eshittirish uchun musiqa</span>
+    </div>
+    <button class="action ghost" id="musicBtn">▶ Yoqish</button>
+  </div>
+
+  <h2 class="timeline-heading">Davlat madhiyasi</h2>
+  <div class="controls" style="justify-content: space-between;">
+    <div class="field" style="font-size:14px; color:var(--ink);">
+      <span>🇺🇿</span>
+      <span>O'zbekiston Respublikasi Davlat Madhiyasi</span>
+    </div>
+    <a class="action ghost" style="text-decoration:none; display:inline-block;"
+       href="http://nationalanthems.me/uzbekistan-ozbekiston-respublikasining-davlat-madhiyasi/"
+       target="_blank" rel="noopener">▶ Tinglash</a>
+  </div>
+
+  <footer>
+    7 ta dars × 45 daqiqa · darslar orasida 5 daqiqa tanaffus · 5-darsdan keyin 25 daqiqalik katta tanaffus.<br>
+    Sahifa ochiq turganda belgilangan vaqtlarda avtomatik qo'ng'iroq chalinadi.
+  </footer>
+
+</div>
+
+<script href="app.js">
+</script>
+</body>
+</html>
